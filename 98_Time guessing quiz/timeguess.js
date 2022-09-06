@@ -42,7 +42,7 @@ stop.addEventListener("click",
     clearTimeout(timeoutid); //setTimeout()でセットしたタイマーを解除する際に使用
     stopTime = Date.now() - startTime; 
     time = parseInt(stopTime);
-    if(time > 10000)
+    if(time > 10000 && time < 11000)
     {
       w_sound = resultSound[3];
       soundControl("start", w_sound);
