@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#main{
+    height: 420px;
+    width: 360px;
+    border: 10px #000 solid;
+    background-color: #b7d4a8;
+    border-radius: 20px;
+    margin: 50px auto;
+}
+
+#stage{
+    width: 304px;
+    height: 304px;
+    margin: 20px auto;
+    position: relative;
+    border: 2px #000 solid;
+}
+
+#snake > div{
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    position: absolute;
+    border: 1px solid #b7d4a8;
+}
+
+#food{
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    background-color: #000;
+    top: 100px;
+    left: 120px;
+    display: flex;
+    flex-flow: wrap;
+}
+
+#info{
+    width: 304px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between;
+    font: bold 20px courier;
+}
+
