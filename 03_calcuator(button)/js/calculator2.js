@@ -53,7 +53,65 @@ elementCancel.addEventListener("click", clear);
 
 
 
+document.body.addEventListener("keydown",event=>{
+  console.log(event.key);
+  switch(event.key)
+  {
+    case "1":
+      edit(event.key)
+      break
+    case "2":
+      edit(event.key)
+      break
+    case "3":
+      edit(event.key)
+      break
+    case "4":
+      edit(event.key)
+      break
+    case "5":
+      edit(event.key)
+      break
+    case "6":
+      edit(event.key)
+      break
+    case "7":
+      edit(event.key)
+      break
+    case "8":
+      edit(event.key)
+      break
+    case "9":
+      edit(event.key)
+      break
+    case "0":
+      edit(event.key)
+      break
+    case "+":
+      update("+")
+      break
+    case "-":
+      update("-")
+      break
+    case "*":
+      update("*")
+      break
+    case "/":
+      update("/")
+      break
+    case "Backspace":
+      clear()
+      break
+    case "Enter":
+      dspResult()
+      break
+    
+  }
 
+  
+
+  
+});
 
 
 
