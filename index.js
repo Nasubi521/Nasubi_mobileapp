@@ -1,22 +1,37 @@
-var navDiv = document.getElementById("navDiv");
+// 指定したID名のオブジェクトを取得
+var navDiv = $("#navDiv");
 
-var allA = document.getElementsByTagName("a");
+// 指定したタグのオブジェクトを取得
+// var allA = $("a"); <==このように取得できるが、使わないのでコメントアウト
 
-// allA[0].style.visibility = 'hidden';
-for (var i = 0; i < allA.length; i++) {
-  allA[i].style.visibility = "hidden";
-}
+// aタグの要素数を取得
+cnt = $("a").length
 
-window.onload = function () {
+// 複数の要素に同じ処理を当てる...ここはforを使わなくてもjQueryならできる
+$(document).ready(function(){
+  // $("a").css("visibility", "hidden");
+  $("a").hide();
+});
+////以下のようにdocumentやreadyを省略して書くことが可能
+// $(function(){
+//   $("a").css("visibility", "hidden");
+// });
+
+$(window).on("load", function() {
   var index = 0;
 
   var timer;
 
-  timer = setInterval(function () {
-    allA[index].style.visibility = "visible";
-    index++;
-    if (index > allA.length - 1) {
-      clearInterval(timer);
-    }
-  }, 500);
-};
+  $(function(){
+    timer = setInterval(function(){
+      // $("a").eq(index).css("visibility", "visible");
+      $("a").eq(index).toggle(250);
+
+      index++;
+      if (index == cnt) {
+        clearInterval(timer);
+      }
+    }, 500);
+  });
+  
+});
